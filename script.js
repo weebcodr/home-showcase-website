@@ -1,22 +1,4 @@
-// Mobile Navigation Toggle
-document.addEventListener('DOMContentLoaded', function() {
-    const navToggle = document.getElementById('nav-toggle');
-    const navMenu = document.getElementById('nav-menu');
-    
-    if (navToggle && navMenu) {
-        navToggle.addEventListener('click', function() {
-            navMenu.classList.toggle('active');
-        });
-
-        // Close mobile menu when clicking on a link
-        const navLinks = document.querySelectorAll('.nav-link');
-        navLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                navMenu.classList.remove('active');
-            });
-        });
-    }
-});
+// Navigation functionality removed - using action buttons instead
 
 // Smooth Scrolling Function
 function scrollToSection(sectionId) {
@@ -168,17 +150,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-// Navbar scroll effect
-window.addEventListener('scroll', function() {
-    const navbar = document.querySelector('.navbar');
-    if (window.scrollY > 50) {
-        navbar.style.background = 'rgba(255, 255, 255, 0.98)';
-        navbar.style.boxShadow = '0 2px 20px rgba(0,0,0,0.1)';
-    } else {
-        navbar.style.background = 'rgba(255, 255, 255, 0.95)';
-        navbar.style.boxShadow = 'none';
-    }
-});
+// Navbar scroll effect removed - no navbar present
 
 // Intersection Observer for animations
 document.addEventListener('DOMContentLoaded', function() {
@@ -229,19 +201,7 @@ function debounce(func, wait) {
     };
 }
 
-// Optimized scroll handler
-const optimizedScrollHandler = debounce(function() {
-    const navbar = document.querySelector('.navbar');
-    if (window.scrollY > 50) {
-        navbar.style.background = 'rgba(255, 255, 255, 0.98)';
-        navbar.style.boxShadow = '0 2px 20px rgba(0,0,0,0.1)';
-    } else {
-        navbar.style.background = 'rgba(255, 255, 255, 0.95)';
-        navbar.style.boxShadow = 'none';
-    }
-}, 10);
-
-window.addEventListener('scroll', optimizedScrollHandler);
+// Optimized scroll handler removed - no navbar present
 
 // Console log for debugging
 console.log('Home Showcase Website - JavaScript Loaded Successfully');
